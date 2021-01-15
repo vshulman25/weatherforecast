@@ -27,7 +27,9 @@ $(document).ready(function () {
     }).then(function (response) {
       console.log(response)
       let cityname = $("<h1>").text(response.name)
-      let temp = $("<div>").text((response.main.temp - 273.15) * 1.80 + 32)//look for jquery & add class for styling to fixed look up
+      let temp = $("<div>").text((response.main.temp - 273.15) * 1.80 + 32).toFixed(2)
+      
+      //look for jquery & add class for styling to fixed look up
 
       $("#today").append(cityname, temp)
     });
@@ -48,7 +50,7 @@ $(document).ready(function () {
           // only look at forecasts around 3:00pm - card for each day when it hits 9 x 5 
           if (response.list[i].dt_txt.indexOf("9:00:00") !== -1) {
             // create html elements for a bootstrap card
-            var forecastTemp = $("<h3>").text(response.list[i].main.temp)
+            var forecastTemp = $("<h3>").text((response.list[i].main.temp- 273.15) * 1.80 + 32)
             $("#forecast .row").append(forecastTemp)
           }
         }
