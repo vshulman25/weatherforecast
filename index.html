@@ -1,28 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
 
-<!-- bootstrap being pulled in -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+
+  <!-- bootstrap being pulled in -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+
+  <!-- loading icon for library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
-
 <body>
+  <!-- search button here -->
+  <div class="cotainer-fluid">
+    <div class="row">
+      <a class="col-lg-3 bg-light">
+        <h3 class="mt-1">Search for a city here</h3>
+        <div class="form-inline form-group">
+          <!-- <form class="searchbtn"> -->
+            <input type="text" placeholder="Search.." class= "search-value" name="search">
+            <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
+          <!-- </form> -->
+        </div>
 
-<nav class="navbar navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand">What's it like outside?</a>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+<!-- history here -->
+        <ul class="list-group history"></ul>
+      </a>
+
+      <div class = "col-lg-9">
+        <div id="today" class="mt-3"></div>
+        <div id ="forecast" class="mt-3"></div>
+      </div>
+
+
     </div>
-  </nav>
+  </div>
 
-    
+  <!-- pull JS in -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <!-- code to JS file -->
+  <script src="script.js"></script>
+
 </body>
+
 </html>
