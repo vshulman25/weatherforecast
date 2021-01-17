@@ -3,6 +3,8 @@
 
 ## Description 
 
+This assignment I was tasked with making an API call to OpenWeatherAPI to provide the user with current weather data as well as future. 
+
 api key - 931abc2f197b56ef2fd113e5d91582df
 
 api call - http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={API key}
@@ -28,7 +30,7 @@ OpenWeather API - retrieve weather data for cities
 
 ## Installation 
 
-Use preferred code reader and browser to view HTML, JS CSS & README files. This app also utilizes dayjs library, accessed as a node module - a gitignore file was created for this to prevent modules from uploading.
+Use preferred code reader and browser to view HTML, JS CSS & README files. 
 
 --- 
 
