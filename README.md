@@ -36,7 +36,7 @@ Use preferred code reader and browser to view HTML, JS CSS & README files.
 
 ## Preview 
 
-![Whats The Plan](./assets/whatstheplan.png)
+![Weather Dashboard](./assets/Weather.png)
 
 ---
 
