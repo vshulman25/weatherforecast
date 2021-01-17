@@ -18,3 +18,11 @@ body {
 .red {
     background-color: red;
 }
+
+#forecast {
+text-align: center;
+}
+
+.row {
+    text-align: center;
+}
