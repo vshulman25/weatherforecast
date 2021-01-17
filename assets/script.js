@@ -52,7 +52,7 @@ $(document).ready(function () {
 
       // api call fo uv data 
       let APIkey = "931abc2f197b56ef2fd113e5d91582df";
-      let queryURL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + latitude + "&lon=" + longitude + "&appid=" + APIkey;
+      let queryURL = "https://api.openweathermap.org/data/2.5/uvi?lat=" + latitude + "&lon=" + longitude + "&appid=" + APIkey;
       console.log(queryURL)
       $.ajax({
         url: queryURL,
