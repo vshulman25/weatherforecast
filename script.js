@@ -56,7 +56,18 @@ $(document).ready(function () {
         method: "GET"
       }).then(function(response2){
         console.log(response2)
-       let uvIndex = $("<div>").text("UV Index: " + response2.value).addClass("green")
+       let uvIndex = $("<div>").text("UV Index: " + response2.value)
+
+
+       if (response2.value <= 3) {
+        $(uvIndex).addClass("green");
+       } else if (response2.value >= 3 && response2.value < 6 ) {
+         $(uvIndex).addClass("yellow");
+       } else if (response2.daily >= 6 && response2.value < 9) {
+           $(uvIndex).addClass("orange");
+       } else  {
+           $(uvIndex).addClass("red");
+       } console.log(response2)
       //  $("#uvIndex").addClass("")
        $("#today").append(uvIndex)
       }) 
@@ -84,6 +95,8 @@ $(document).ready(function () {
       console.log(response)
       $("#forecast").html("<h4 class=\"mt-3\">5-Day Forecast:</h4>").append("<div class=\"row\" + \"row\">");
       $("#forecastSearch")
+
+      
       for (let i = 0; i < response.list.length; i++) {
         // only look at forecasts around 12:00pm - card for each day when it hits 12 x 5 
         if (response.list[i].dt_txt.indexOf("12:00:00") !== -1) {
